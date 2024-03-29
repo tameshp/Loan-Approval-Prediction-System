@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="container" id="container">
+    <div class="form-container sign-in-container">
+        <form method="POST" action="/login">
+            <h1>Sign In</h1>
+            <div class="input_horizontal">
+                <input type="text" placeholder="Enter your username" name="username"/>
+                <i class='bx bxs-user'></i> <!-- Boxicon for user icon -->
+            </div>
+            <div class="input_horizontal">
+                <input type="password" placeholder="Enter your password" name="password"/>
+                <i class='bx bxs-lock-alt'></i> <!-- Boxicon for lock icon -->
+            </div>
+            <span id="error-msg" style="color: red;"></span>
+            <span id="user-exists-msg" style="color: red;"></span>
+            <button value="Sign In" name="signin" type="submit" class="signIn">Sign In</button>
+        </form>
+    </div>
+    <div class="form-container sign-up-container" style="display: none;">
+        <form method="post" action="/signup">
+            <h1>Create Account</h1>
+            <input type="text" placeholder="Enter your username" name="username"/>
+            <input type="email" placeholder="Enter your email" name="email"/>
+            <input type="password" placeholder="Enter your password" name="password"/>
+            <button value="Sign Up" name="signup" type="submit" class="signUp">Sign Up</button>
+        </form>
+    </div>
+    <div class="signup-link">
+        <p>Don't have an account? <a href="#" id="showSignUp">Sign Up</a></p>
+    </div>
+</div>
+<script>
+    const showSignUpButton = document.getElementById('showSignUp');
+    const signInContainer = document.querySelector('.sign-in-container');
+    const signUpContainer = document.querySelector('.sign-up-container');
+
+    showSignUpButton.addEventListener('click', () => {
+        signInContainer.style.display = 'none';
+        signUpContainer.style.display = 'block';
+    });
+</script>
+</body>
+</html>

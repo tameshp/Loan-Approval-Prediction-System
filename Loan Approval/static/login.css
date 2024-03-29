@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('Images/loan.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    /*filter: blur(5px);*/ /* Add blur effect to the background */
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity to make it more transparent */
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+    width: 90%;
+    max-width: 400px;
+}
+
+.form-container {
+    padding: 50px;
+}
+
+h1, h2, p {
+    text-align: center;
+    color: white;
+}
+
+input {
+    background-color: #eee;
+    border: none;
+    padding: 15px;
+    margin: 8px 0;
+    width: 100%;
+    color: black;
+    border-radius: 8px;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+.overlay {
+    background: #111010;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: white;
+}
+
+.overlay-panel {
+    padding: 20px;
+}
+
+.overlay-left {
+    text-align: left;
+}
+
+.overlay-right {
+    text-align: right;
+}
+
+.social-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.social-container a {
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+}
+
+/* Show both sign-in and sign-up containers by default */
+.sign-in-container,
+.sign-up-container {
+    display: block;
+}
